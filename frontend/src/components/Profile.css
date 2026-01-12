@@ -1,0 +1,122 @@
+/* Full background */
+.profile-dark-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 70px 20px;
+  background: #0f0f0f;
+  min-height: 100vh;
+}
+
+/* Main Card */
+.profile-dark-card {
+  width: 450px;
+  background: #1a1a1a;
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid #ff7a00;
+  box-shadow: 0 0 25px rgba(255, 128, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.profile-dark-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(255, 128, 0, 0.35);
+}
+
+/* Header Section */
+.profile-dark-header {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.profile-dark-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #ff7a00;
+  padding: 5px;
+  background: #000;
+}
+
+.profile-dark-header h2 {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.profile-dark-header p {
+  color: #ffaa66;
+  font-size: 17px;
+}
+
+/* Details Box */
+.profile-dark-details {
+  background: #111;
+  padding: 22px;
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 1px solid #ff7a0030;
+}
+
+.dark-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #ff7a0025;
+  font-size: 17px;
+}
+
+.dark-detail-row:last-child {
+  border-bottom: none;
+}
+
+.dark-detail-row span {
+  color: #cccccc;
+}
+
+.dark-detail-row strong {
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+/* Button */
+.profile-dark-btn {
+  margin-top: 30px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff7a00, #ff5500);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.profile-dark-btn:hover {
+  background: linear-gradient(90deg, #ff5500, #ff3300);
+  box-shadow: 0 0 15px rgba(255, 85, 0, 0.6);
+  cursor: pointer;
+}
+.profile-dark-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.profile-dark-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

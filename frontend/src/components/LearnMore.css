@@ -1,0 +1,161 @@
+/* Reset box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================== CONTAINER ======================== */
+.lm-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #090909;
+  color: #fff;
+  padding: 40px;
+  font-family: system-ui, sans-serif;
+  position: relative;
+}
+
+/* ======================== CLOSE BUTTON ======================== */
+.lm-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s;
+  z-index: 1000;
+}
+
+.lm-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ======================== INTRO SECTION ======================== */
+.lm-intro {
+  max-width: 850px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.lm-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.lm-intro p {
+  margin-bottom: 10px;
+  opacity: 0.88;
+  line-height: 1.5rem;
+}
+
+/* ======================== GRID CARDS ======================== */
+.lm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* ======================== CARD STYLING ======================== */
+.lm-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 410px;
+  width: 100%; /* Grid controls width now */
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.lm-card img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.lm-card:hover img {
+  transform: scale(1.05);
+}
+
+.lm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 4px 18px rgba(255, 210, 100, 0.4);
+}
+
+/* ======================== OVERLAY TEXT (OPTIONAL) ======================== */
+.lm-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+
+.lm-overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.lm-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ======================== ORDER BUTTON ======================== */
+.lm-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.lm-order-btn {
+  background: #ffcc66;
+  color: black;
+  font-weight: bold;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lm-order-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 18px rgba(255, 210, 120, 0.6);
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 1024px) {
+  .lm-intro h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .lm-card {
+    height: 350px;
+  }
+
+  .lm-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .lm-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
