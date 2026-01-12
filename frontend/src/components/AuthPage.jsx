@@ -13,11 +13,11 @@ const AuthPage = ({ setIsLoggedIn }) => {
     const password = e.target.password.value;
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email, password }),
+});
 
       const data = await res.json();
       if (res.ok) {
@@ -44,11 +44,12 @@ const AuthPage = ({ setIsLoggedIn }) => {
     const password = e.target.password.value;
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, lastName, dob, email, password }),
-      });
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ firstName, lastName, dob, email, password }),
+});
+
 
       const data = await res.json();
       if (res.ok) {
