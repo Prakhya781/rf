@@ -16,7 +16,7 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: ["https://rf-hhpw.onrender.com", "http://localhost:3000"],
+    origin: ["https://rf-1-frontend.onrender.com", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
