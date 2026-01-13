@@ -16,7 +16,7 @@ const MenuPage = () => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/menu");
+        const res = await fetch("https://rf-1-backend.onrender.com/api/menu");
         const data = await res.json();
         setMenu(data);
         setFiltered(data);
@@ -77,7 +77,7 @@ const MenuPage = () => {
     const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch("https://rf-1-backend.onrender.com/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
