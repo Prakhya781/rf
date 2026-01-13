@@ -10,7 +10,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (!user.id) return;
 
-    fetch(`http://localhost:5000/api/orders/${user.id}`)
+    fetch(`https://rf-1-backend.onrender.com/api/orders/${user.id}`)
       .then(res => res.json())
       .then(data => setOrders(data))
       .catch(err => console.error(err));
